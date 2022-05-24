@@ -1,5 +1,6 @@
 import vehicles.Car;
 import vehicles.Motorcycle;
+import vehicles.Truck;
 import vehicles.Vehicle;
 
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ public class StartPoint {
 
         file.add(new Car());
         file.add(new Motorcycle());
+        file.add(new Truck());
 
         for (Vehicle v : file ) {
             v.makeSound();
@@ -18,6 +20,5 @@ public class StartPoint {
                 ((Car) v).rollDownWindow();
             }
         }
-
     }
 }
