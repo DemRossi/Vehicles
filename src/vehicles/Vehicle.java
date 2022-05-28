@@ -1,9 +1,7 @@
 package vehicles;
 
-import lombok.Data;
 import fuel.Fuel;
 
-@Data
 public abstract class Vehicle extends CanMakeSound{
     private int speed;
     private Integer wheels;
@@ -21,10 +19,6 @@ public abstract class Vehicle extends CanMakeSound{
     public void setSound(String sound) {
         this.sound = sound;
     }
-
-
-
-
 
     public int getSpeed() {
         return speed;
@@ -57,5 +51,4 @@ public abstract class Vehicle extends CanMakeSound{
     public void setFuel(Fuel fuel) {
         this.fuel = fuel;
     }
-
 }
