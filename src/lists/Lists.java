@@ -53,21 +53,22 @@ public class Lists {
         numList.add(4.5);
 
         // Voorbeeld uit cursus, maar werkt niet: 103_Presentation_70/103_Chap10_70 -> p21
-        // int t = ((Integer) numList).get(0);
+         int t = (Integer) numList.get(0);
 
-        Number t = numList.get(0);
+//        Number t = numList.get(0);
         System.out.println(t);
 
         System.out.println("---------xxxAll methods---------");
         List<String> listToAdd = new ArrayList<>();
-        listToAdd.add("bla");
+        String s = "bla";
+        listToAdd.add(s);
         listToAdd.add("test");
         listToAdd.add("iets");
         listToAdd.add("anders");
 
         List<String> listToRemove = new ArrayList<>();
-        listToAdd.add("test");
-        listToAdd.add("iets");
+        listToRemove.add(s);
+        listToRemove.add("iets");
 
         List<String> allMethodsList = new ArrayList<>(listToAdd);
         System.out.println(allMethodsList);
