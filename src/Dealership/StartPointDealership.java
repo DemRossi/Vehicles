@@ -15,7 +15,11 @@ public class StartPointDealership {
 
         System.out.println(startPointDealership.findCar("1234567890"));
         System.out.println(startPointDealership.findCar("0987654321"));
+
+        // Geeft de juiste auto terug maar waarom krijg ik geen properties van de superclass te zien in de sout??
         System.out.println(startPointDealership.findCar("5673447382"));
+
+
 
     }
     public void makeInventory(){

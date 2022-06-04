@@ -9,4 +9,6 @@ public class Car {
     private String fuel;
     private String color;
 
+
+
 }
