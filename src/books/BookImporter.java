@@ -33,7 +33,6 @@ public class BookImporter {
                         return null;
                     })
                     .collect(Collectors.toList());
-
         }
         return internalBook;
     }

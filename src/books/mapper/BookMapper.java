@@ -25,7 +25,6 @@ public class BookMapper {
             internalBook.setStatus(source.getStatus());
             internalBook.setAuthors(makeAuthors(source));
             internalBook.setCategories(makeCategories(source));
-
         }
 
         return internalBook;
@@ -37,7 +36,6 @@ public class BookMapper {
 
         if (!strAuthors.isEmpty()){
             Author author = new Author();
-
 
             for (String a : strAuthors) {
                 author.setFullName(a);

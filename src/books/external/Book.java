@@ -19,18 +19,4 @@ public class Book {
     private String status;
     private List<String> authors;
     private List<String> categories;
-
-    @Override
-    public String toString() {
-        return "Book{" +
-                "title='" + title + '\'' +
-                ", isbn='" + isbn + '\'' +
-                ", pageCount=" + pageCount +
-                ", publishedDate=" + publishedDate +
-                ", thumbnailUrl='" + thumbnailUrl + '\'' +
-                ", status='" + status + '\'' +
-                ", authors=" + authors +
-                ", categories=" + categories +
-                '}';
-    }
 }
