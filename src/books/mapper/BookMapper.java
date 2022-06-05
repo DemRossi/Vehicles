@@ -10,7 +10,7 @@ import java.util.List;
 
 public class BookMapper {
 
-    public Book externalToInternalBook(final books.external.Book source) throws ParseException {
+    public Book externalToInternalBook(final books.external.Book source) {
         Book internalBook = null;
 
         if (source != null){

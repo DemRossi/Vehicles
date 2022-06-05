@@ -27,7 +27,7 @@ public class StartingPoint {
 
         System.out.println( book.isPresent() ? book.get().getAuthors() : "Book isn't present");
 
-        List<Book> booksByAuthor = bookImporter.getBooksByAuthor(JSON_PATH, "David A. Black" );
+        List<Book> booksByAuthor = bookImporter.getBooksByAuthor(JSON_PATH, "Stefano Mostarda");
         System.out.println(booksByAuthor);
 
     }

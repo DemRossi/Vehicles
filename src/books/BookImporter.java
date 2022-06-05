@@ -24,14 +24,7 @@ public class BookImporter {
     public List<Book> getBooks(final String source) throws IOException {
         if(StringUtils.isNotBlank(source)){
             internalBook = Arrays.stream(mapper.readValue(new FileReader(source), books.external.Book[].class))
-                    .map(book -> {
-                        try {
-                            return bookMapper.externalToInternalBook(book);
-                        } catch (ParseException e) {
-                            e.printStackTrace();
-                        }
-                        return null;
-                    })
+                    .map(book -> bookMapper.externalToInternalBook(book))
                     .collect(Collectors.toList());
         }
         return internalBook;
@@ -53,6 +46,7 @@ public class BookImporter {
             Author a = new Author();
             a.setFullName(author);
 
+            //TODO: bug: cant find books with multiple authors from author
             booksByAuthor = getBooks(source).stream()
                     .filter(book -> book.getAuthors().stream().allMatch(author1 -> author1.getFullName().equals(a.getFullName())))
                     .collect(Collectors.toList());
