@@ -1,5 +1,7 @@
 package books;
 
+import books.internal.Book;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
@@ -19,9 +21,14 @@ public class StartingPoint {
 
         List<Book> publishedBookList = bookImporter.getBooksByStatus(JSON_PATH, "MEAP");
         System.out.println(publishedBookList);
-        System.out.println("Amount of published books: " + publishedBookList.size());
+        System.out.println("Amount of MEAP books: " + publishedBookList.size());
 
-        Optional<Book> book = bookImporter.getBookByIsbn(JSON_PATH, "1932394699");
-        System.out.println(book);
+        Optional<Book> book = bookImporter.getBookByIsbn(JSON_PATH, "1935182323");
+
+        System.out.println( book.isPresent() ? book.get().getAuthors() : "Book isn't present");
+
+        List<Book> booksByAuthor = bookImporter.getBooksByAuthor(JSON_PATH, "David A. Black" );
+        System.out.println(booksByAuthor);
+
     }
 }
