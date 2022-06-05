@@ -21,7 +21,7 @@ public class StartingPoint {
 
         List<Book> publishedBookList = bookImporter.getBooksByStatus(JSON_PATH, "MEAP");
         System.out.println(publishedBookList);
-        System.out.println("Amount of MEAP books: " + publishedBookList.size());
+        System.out.println("Amount of books: " + publishedBookList.size());
 
         Optional<Book> book = bookImporter.getBookByIsbn(JSON_PATH, "1935182323");
 

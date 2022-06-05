@@ -21,7 +21,7 @@ public class BookImporter {
 
     ObjectMapper mapper = new ObjectMapper();
 
-    public List<Book> getBooks(final String source) throws IOException { // Should go inside a service
+    public List<Book> getBooks(final String source) throws IOException {
         if(StringUtils.isNotBlank(source)){
             internalBook = Arrays.stream(mapper.readValue(new FileReader(source), books.external.Book[].class))
                     .map(book -> {
